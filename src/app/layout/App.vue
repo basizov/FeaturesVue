@@ -1,5 +1,8 @@
 <template>
   <custom-select :items='items' />
+  <div class="app__loading">
+    <loading />
+  </div>
 </template>
 
 <script lang='ts'>
@@ -23,5 +26,13 @@
 </script>
 
 <style lang='scss'>
-
+  .app {
+    &__loading {
+      position: relative;
+      width: 10rem;
+      height: 10rem;
+      background-color: hsl(0, 0%, 100%);
+      padding: 1rem;
+    }
+  }
 </style>

@@ -78,6 +78,7 @@
     position: relative;
     width: max-content;
     min-width: 20ch;
+    z-index: 10000;
     &__header,
     &__items {
       border: .1rem solid var(--white);
@@ -94,10 +95,12 @@
     &__items {
       position: absolute;
       overflow: hidden;
+      visibility: hidden;
       top: 100%;
       opacity: 0;
-      transition: top .25s linear, opacity .25s linear;
+      transition: top .25s linear, opacity .25s linear, visibility .25s linear;
       &-active {
+        visibility: visible;
         opacity: 1;
         top: calc(100% + .3rem);
       }
